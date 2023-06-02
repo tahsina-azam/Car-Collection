@@ -1,0 +1,438 @@
+{
+	"info": {
+		"_postman_id": "6153bfba-0586-4f21-9e89-3aff62cc77a8",
+		"name": "Car Repository App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25399360",
+		"_collection_link": "https://rocketml-aws.postman.co/workspace/Sheeva~6798d39c-6976-466f-8750-b2001ba172ae/collection/25399360-6153bfba-0586-4f21-9e89-3aff62cc77a8?action=share&creator=25399360&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Get All Cars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:10010/car",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10010",
+					"path": [
+						"car"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Cars",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:10010/car",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10010",
+							"path": [
+								"car"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "71"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"47-eRdgTXos3iuPlGF4LGymSXM6u7M\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 10:14:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"cars\": [\n        {\n            \"id\": 1,\n            \"make\": \"BMW\",\n            \"model\": \"M3 GTR\",\n            \"owner\": \"Sheeva Chan\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Add a car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"make\": \"BMW\",\n    \"model\": \"M3 GTR\",\n    \"owner\": \"Sheeva Chan\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:10010/car",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10010",
+					"path": [
+						"car"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add a car",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"make\": \"BMW\",\n    \"model\": \"M3 GTR\",\n    \"owner\": \"Sheeva Chan\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:10010/car",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10010",
+							"path": [
+								"car"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"34-sM3TwRTVCc+jN9hjskYn/IJ4FbU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 10:14:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": 1,\n    \"description\": \"Car added to the list!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Car By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:10010/car/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10010",
+					"path": [
+						"car",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Car By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:10010/car/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10010",
+							"path": [
+								"car",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "60"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3c-zwgCT9ubgOP9zjpyv6TCwsoHN5Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 10:14:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"make\": \"BMW\",\n    \"model\": \"M3 GTR\",\n    \"owner\": \"Sheeva Chan\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update a Car By Id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"make\": \"BMW\",\n        \"model\": \"M3 GTR\",\n        \"owner\": \"Tahsina Bintay Azam Chan\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:10010/car/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10010",
+					"path": [
+						"car",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update a Car By Id",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"make\": \"BMW\",\n        \"model\": \"M3 GTR\",\n        \"owner\": \"Tahsina Bintay Azam Chan\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:10010/car/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10010",
+							"path": [
+								"car",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-TodJrecWNw+a/cuwR6nHjFRxW5c\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 10:37:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": 1,\n    \"description\": \"Car updated!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete a car",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:10010/car/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10010",
+					"path": [
+						"car",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete a car",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:10010/car/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10010",
+							"path": [
+								"car",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-m+YhMDeOw+WCTz/zgBs8sqXkABU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 May 2023 10:38:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": 1,\n    \"description\": \"Car deleted!\"\n}"
+				}
+			]
+		}
+	]
+}
